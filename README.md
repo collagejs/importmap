@@ -45,6 +45,33 @@ if (!validationResult.valid) {
 
 > ⚠️ **IMPORTANT**:  A resolver that holds an invalid import map will throw an error if module resolution is attempted.  Always check for `Resolver.valid` (or `Resolver.validationResult.valid`).
 
+## Resolution Return Values
+
+This package adheres as best it can to the expected module resolution mechanism, but for the sake of practicality, it does a couple of things users might not expect.  Read this section to fully understand the return value of `Resolver.resolve()`.
+
+If the provided module specifier matches (either in scopes or global imports), then the value in the import map entry that matched will be returned.  So far, this is standard.
+
+In the cases where no match is found and the provided module specifier was:
+
+- A relative URL (starts with `./` or `../`)
+- An absolute URL (starts with `/`)
+- A full URL
+
+Then the module identifier is returned.  A special case happens for relative URL's when an importer that is a URL is provided.  In this case, the relative URL represented by the module identifier is resolved against the importer and the result is returned.
+
+Example:
+
+```typescript
+const resolved = resolver.resolve('../my/module', '/base-app');
+console.log(resolved);
+/*
+------ OUTPUT ------
+/my/module
+*/
+```
+
+Since the relative URL has consumed (popped) one URL segment, the importer value has provided that segment and the end result is an absolute URL.
+
 ## Related Packages
 
 + `@jspm/import-map`: [NPM](https://www.npmjs.com/package/@jspm/import-map) Provides import map building via code and module resolution.  Does not provide validation.
