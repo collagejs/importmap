@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/collagejs/core/HEAD/src/logos/collagejs-48.svg" alt="CollageJS Logo" width="48" height="48" align="left">&nbsp;Importmap
 
-This is the home of `@collagejs/importmap`, an NPM package that validates import maps and executes module matching according to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap).
+This is the home of `@collagejs/importmap`, an NPM package that validates import maps and resolves modules according to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap).
 
 ## Quickstart
 
