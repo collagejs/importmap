@@ -44,3 +44,7 @@ if (!validationResult.valid) {
 ```
 
 > ⚠️ **IMPORTANT**:  A resolver that holds an invalid import map will throw an error if module resolution is attempted.  Always check for `Resolver.valid` (or `Resolver.validationResult.valid`).
+
+## Related Packages
+
++ `@jspm/import-map`: [NPM](https://www.npmjs.com/package/@jspm/import-map) Provides import map building via code and module resolution.  Does not provide validation.
