@@ -1,0 +1,48 @@
+{
+  "name": "@collagejs/importmap",
+  "version": "0.1.0",
+  "description": "Provides parsing, validation and module resolution for import maps.",
+  "keywords": [
+    "importmap",
+    "collagejs",
+    "micro-frontend"
+  ],
+  "homepage": "https://github.com/collagejs/vite#readme",
+  "bugs": {
+    "url": "https://github.com/collagejs/vite/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collagejs/vite.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "José Pablo Ramírez Vargas",
+    "email": "webJose@gmail.com"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && publint",
+    "clean": "rimraf dist",
+    "check": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "publint": "^0.3.16",
+    "rimraf": "^6.1.2",
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.0.0",
+    "vitest": "^3.0.0"
+  }
+}
