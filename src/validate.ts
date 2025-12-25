@@ -1,6 +1,12 @@
 import type { ImportMap, ValidationResult } from "./types.js";
 import { ValidationResultImpl } from "./ValidationResult.js";
 
+/**
+ * Validates an import map object according to the Import Maps specification and several
+ * additional security checks.
+ * @param importMap Import map object to validate.
+ * @returns An object of type `ValidationResult` with the details of the validation process.
+ */
 export function validate(importMap: ImportMap): ValidationResult {
     const result = new ValidationResultImpl();
 
