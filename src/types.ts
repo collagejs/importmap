@@ -49,6 +49,12 @@ export interface Resolver {
      * absolute or full URL.
      */
     resolve(specifier: string, importer?: string | undefined): string | undefined;
+    /**
+     * Indicates whether the contained import map is valid.
+     */
     readonly valid: boolean;
+    /**
+     * Complete validation result object for the contained import map.
+     */
     readonly validationResult: ValidationResult;
 }
