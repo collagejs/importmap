@@ -5,7 +5,6 @@ export default defineConfig({
   plugins: [
     dts({
       entryRoot: 'src',
-      bundledPackages: ['@collagejs/shared'],
       rollupTypes: true,
       exclude: ['tests/**/*'],
     })
