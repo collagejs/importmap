@@ -7,13 +7,13 @@
     "collagejs",
     "micro-frontend"
   ],
-  "homepage": "https://github.com/collagejs/vite#readme",
+  "homepage": "https://github.com/collagejs/importmap#readme",
   "bugs": {
-    "url": "https://github.com/collagejs/vite/issues"
+    "url": "https://github.com/collagejs/importmap/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/collagejs/vite.git"
+    "url": "git+https://github.com/collagejs/importmap.git"
   },
   "license": "MIT",
   "author": {

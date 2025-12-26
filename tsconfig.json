@@ -13,10 +13,10 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "rootDir": "./src"
   },
   "include": [
     "src/**/*",
-    "tests/**/*",
   ],
   "exclude": [
     "dist",
