@@ -1,6 +1,6 @@
 {
   "name": "@collagejs/importmap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provides parsing, validation and module resolution for import maps.",
   "keywords": [
     "importmap",
