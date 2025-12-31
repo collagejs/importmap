@@ -21,6 +21,21 @@ This is the home of `@collagejs/importmap`, an NPM package that validates import
     // ------------------------------------^ module specifier ---^ importer
     ```
 
+## Using in the Browser Directly
+
+> Since v0.2.0
+
+The package also exports an IIFE version that creates the global object `ImportMap`.  This object provides access to the `resolver()` and `validate()` functions:
+
+```html
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/@collagejs/importmap@latest/dist/index.iife.js"></script>
+  <script type="text/javascript">
+    console.log('ImportMap object:', ImportMap);
+  </script>
+</head>
+```
+
 ## Importmap Validation
 
 Validation happens in 2 places:  When creating a resolver, and when explicitly validating an import map:

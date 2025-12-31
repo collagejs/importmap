@@ -13,7 +13,8 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       fileName: 'index',
-      formats: ['es']
+      formats: ['es', 'iife'],
+      name: 'ImportMap'
     },
   },
 });
